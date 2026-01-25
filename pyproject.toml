@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metinspect"
+version = "0.0.1"
+description = "Industrial inspection + metrology pipeline with uncertainty (PatchCore baseline on MVTec AD)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Jibin Thomas" }]
+dependencies = [
+  "typer>=0.12",
+  "PyYAML>=6.0",
+  "numpy>=1.24",
+  "opencv-python>=4.8",
+  "scikit-image>=0.22",
+  "matplotlib>=3.8",
+  "scikit-learn>=1.4",
+  "torch>=2.2",
+  "timm>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+metinspect = "metinspect.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E203", "E266", "B008"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

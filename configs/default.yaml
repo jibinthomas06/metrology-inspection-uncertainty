@@ -1,0 +1,21 @@
+project:
+  name: metrology-inspection-uncertainty
+
+paths:
+  data_dir: data
+  mvtec_dir: data/mvtec_ad
+  reports_dir: reports
+
+runtime:
+  device: cpu
+  seed: 42
+
+mvtec:
+  category: bottle
+  image_size: 256
+
+pixel_size_mm: 0.05
+
+decision:
+  ok_thresh: 0.35
+  nok_thresh: 0.65

@@ -3,7 +3,8 @@ project:
 
 paths:
   data_dir: data
-  mvtec_dir: data/mvtec_ad
+  mvtec_dir: D:/datasets/mvtec_anomaly_detection
+
   reports_dir: reports
 
 runtime:

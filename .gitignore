@@ -1,4 +1,4 @@
-__pycache__/
+﻿__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -8,7 +8,7 @@ __pycache__/
 dist/
 build/
 .venv/
-data/
+/data/
 reports/**
 !reports/.gitkeep
 .DS_Store

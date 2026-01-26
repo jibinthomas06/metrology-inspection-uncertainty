@@ -1,10 +1,31 @@
 ﻿from __future__ import annotations
 
+import os
 from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
 
 VALID_IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
+
+DEFAULT_MVTEC_ROOT = Path("data") / "mvtec_ad"
+ENV_MVTEC_ROOT = "METINSPECT_DATA_ROOT"
+
+
+def get_mvtec_root() -> Path:
+    """
+    Resolve MVTec dataset root.
+
+    Priority:
+      1) env var METINSPECT_DATA_ROOT
+      2) default: data/mvtec_ad (relative to repo root)
+
+    Examples (PowerShell):
+      $env:METINSPECT_DATA_ROOT = "D:\\datasets\\mvtec_anomaly_detection"
+    """
+    env = os.environ.get(ENV_MVTEC_ROOT, "").strip()
+    if env:
+        return Path(env).expanduser()
+    return DEFAULT_MVTEC_ROOT
 
 
 @dataclass(frozen=True)
@@ -29,7 +50,7 @@ def validate_mvtec_root(mvtec_root: Path) -> None:
     if not mvtec_root.exists():
         raise FileNotFoundError(
             f"MVTec AD not found at: {mvtec_root}\n"
-            "Place the dataset here (default: data/mvtec_ad).\n"
+            f"Set {ENV_MVTEC_ROOT} to your dataset path, or place the dataset at: {DEFAULT_MVTEC_ROOT}\n"
             "The folder should contain category subfolders like 'bottle', 'cable', etc."
         )
 

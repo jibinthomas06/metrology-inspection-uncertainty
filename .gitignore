@@ -2,22 +2,37 @@
 *.pyc
 *.pyo
 *.pyd
+
 .pytest_cache/
 .ruff_cache/
+
 *.egg-info/
 dist/
 build/
+
 .venv/
+
+# Local datasets
 /data/
-reports/**
-!reports/.gitkeep
+
 .DS_Store
 Thumbs.db
+
+# Generated run configs
 configs/_runs/
-reports/*
+
+# Reports: ignore everything by default
+reports/**
+
+# Allow selected artifacts to be versioned
 !reports/metrics_table.csv
 !reports/summary_eval.md
 !reports/interpretation.md
+
+# Allow figures directory (but not everything inside it)
 !reports/figures/
 !reports/figures/image_auroc_by_category.png
 !reports/figures/pixel_auroc_by_category.png
+
+# Keep folder in git even when empty
+!reports/.gitkeep

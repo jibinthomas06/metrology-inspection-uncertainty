@@ -14,3 +14,10 @@ reports/**
 .DS_Store
 Thumbs.db
 configs/_runs/
+reports/*
+!reports/metrics_table.csv
+!reports/summary_eval.md
+!reports/interpretation.md
+!reports/figures/
+!reports/figures/image_auroc_by_category.png
+!reports/figures/pixel_auroc_by_category.png

@@ -1,0 +1,16 @@
+category,backbone,image_auroc,pixel_auroc,metrics_file
+bottle,resnet18,0.9984126984126984,0.9779008606539317,reports/metrics_patchcore_bottle_resnet18.json
+cable,resnet18,0.9047976011994003,0.9594381865008327,reports/metrics_patchcore_cable_resnet18.json
+capsule,resnet18,0.8807339449541285,0.9785171547048501,reports/metrics_patchcore_capsule_resnet18.json
+carpet,resnet18,0.9245585874799358,0.9782751011368889,reports/metrics_patchcore_carpet_resnet18.json
+grid,resnet18,0.695906432748538,0.8556280190322627,reports/metrics_patchcore_grid_resnet18.json
+hazelnut,resnet18,0.9814285714285714,0.9838449630106629,reports/metrics_patchcore_hazelnut_resnet18.json
+leather,resnet18,0.9585597826086957,0.9811170530785699,reports/metrics_patchcore_leather_resnet18.json
+metal_nut,resnet18,0.9335288367546433,0.9516567034920773,reports/metrics_patchcore_metal_nut_resnet18.json
+pill,resnet18,0.7490452809601746,0.9265308989298375,reports/metrics_patchcore_pill_resnet18.json
+screw,resnet18,0.7437999590079934,0.9761190600142449,reports/metrics_patchcore_screw_resnet18.json
+tile,resnet18,0.9134199134199135,0.8175002083180433,reports/metrics_patchcore_tile_resnet18.json
+toothbrush,resnet18,0.9583333333333335,0.9913144949216539,reports/metrics_patchcore_toothbrush_resnet18.json
+transistor,resnet18,0.85875,0.905633026029389,reports/metrics_patchcore_transistor_resnet18.json
+wood,resnet18,0.9850877192982456,0.8835772366813404,reports/metrics_patchcore_wood_resnet18.json
+zipper,resnet18,0.8361344537815126,0.9448024287119647,reports/metrics_patchcore_zipper_resnet18.json

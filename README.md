@@ -22,3 +22,9 @@ metinspect train --backbone resnet18
 
 # 3) Evaluate + save a qualitative gallery
 metinspect eval --backbone resnet18 --gallery-n 12
+
+### Plots
+
+![Image AUROC by category](reports/figures/image_auroc_by_category.png)
+
+![Pixel AUROC by category](reports/figures/pixel_auroc_by_category.png)

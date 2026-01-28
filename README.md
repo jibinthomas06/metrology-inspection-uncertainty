@@ -28,3 +28,9 @@ metinspect eval --backbone resnet18 --gallery-n 12
 ![Image AUROC by category](reports/figures/image_auroc_by_category.png)
 
 ![Pixel AUROC by category](reports/figures/pixel_auroc_by_category.png)
+
+### Qualitative examples (bottle)
+
+![Bottle example](docs/images/bottle_000.png)
+![Bottle example](docs/images/bottle_003.png)
+![Bottle example](docs/images/bottle_007.png)

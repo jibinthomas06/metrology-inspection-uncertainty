@@ -155,9 +155,11 @@ def main() -> int:
     lines.append("| category | backbone | image_auroc | pixel_auroc |")
     lines.append("|---|---|---:|---:|")
     for r in sorted(rows, key=lambda x: (str(x["backbone"]), str(x["category"]))):
-        lines.append(
-            f"| {_fmt(r['category'])} | {_fmt(r['backbone'])} | {_fmt(r['image_auroc'])} | {_fmt(r['pixel_auroc'])} |"
-        )
+        cat = _fmt(r["category"])
+        bb = _fmt(r["backbone"])
+        img = _fmt(r["image_auroc"])
+        pix = _fmt(r["pixel_auroc"])
+        lines.append(f"| {cat} | {bb} | {img} | {pix} |")
 
     out_md.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

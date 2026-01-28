@@ -50,7 +50,9 @@ def validate_mvtec_root(mvtec_root: Path) -> None:
     if not mvtec_root.exists():
         raise FileNotFoundError(
             f"MVTec AD not found at: {mvtec_root}\n"
-            f"Set {ENV_MVTEC_ROOT} to your dataset path, or place the dataset at: {DEFAULT_MVTEC_ROOT}\n"
+            f"Set {ENV_MVTEC_ROOT} to your dataset path, or place the dataset at:\n"
+            f"{DEFAULT_MVTEC_ROOT}\n"
+
             "The folder should contain category subfolders like 'bottle', 'cable', etc."
         )
 
